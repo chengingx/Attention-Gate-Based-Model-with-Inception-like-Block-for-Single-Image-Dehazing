@@ -39,6 +39,6 @@ class BasicDataset(Dataset):
         hazy_img = torchvision.io.read_image(hazy_img_path)
 
         hazy = self.preprocess(hazy_img, mode="minmax")
-        gt = self.preprocess(gt_img, mode="none")
+        gt = self.preprocess(gt_img, mode="minmax")
 
         return hazy, gt
