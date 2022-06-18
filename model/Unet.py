@@ -44,18 +44,6 @@ class conv_block(nn.Module):
         out = self.relu(out)
         return out
 
-# class conv_block(nn.Module):
-#     def __init__(self, ch_in, ch_out):
-#         super(conv_block,self).__init__()
-#         self.conv3x3_1 = SingleConv(ch_in, ch_out)
-#         self.conv5x5_1 = SingleConv(ch_out, ch_out)
-#         self.relu = nn.ReLU(inplace=True)
-#
-#     def forward(self, x):
-#         x_3x3_1 = self.conv3x3_1(x)
-#         x_5x5_1 = self.conv5x5_1(x_3x3_1)
-#         return x_5x5_1
-
 class Attention_block(nn.Module):
     def __init__(self, F_g, F_l, F_int):
         super(Attention_block, self).__init__()
