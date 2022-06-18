@@ -39,7 +39,7 @@ class BasicDataset(Dataset):
         hazy_img = torchvision.io.read_image(hazy_img_path)
 
         hazy = self.preprocess(hazy_img, "minmax")
-        gt = self.preprocess(gt_img, "none")
+        gt = self.preprocess(gt_img, "minmax")
 
         # When train indoor dataset, use the following code to do data agumentation
         # hflip = random.random() < 0.5
