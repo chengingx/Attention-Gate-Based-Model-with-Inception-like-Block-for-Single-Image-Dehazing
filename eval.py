@@ -70,5 +70,5 @@ if __name__ == "__main__":
     #
     # print(elasped / 500)
 
-    print("PSNR = ", psnr)
-    print("SSIM = ", ssim)
+    print("PSNR = ", total_psnr/500)
+    print("SSIM = ", total_ssim/500)
